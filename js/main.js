@@ -7,14 +7,12 @@ body.css({
 })
 
 logoIcon.css({
-  'display': 'block',
   'position': 'absolute',
-  'left': '0'
+  'left': '0px'
 })
 
 logoText.mouseover(function(){
   logoIcon.animate({
-  'display': 'block',
   'position': 'absolute',
   'left': '-24px'}, 300)
   logoText.css({'color': '#fbd784'})
@@ -24,9 +22,8 @@ logoText.mouseover(function(){
 
 logoText.mouseout(function(){
   logoIcon.animate({
-  'display': 'flex',
   'position': 'absolute',
-  'left': '0'}, 500)
+  'left': '-8px'}, 500)
   logoText.css({'color': '#fff'})
   logoText.animate({'position': 'relative','left': '-8px'}, 500)
 });
