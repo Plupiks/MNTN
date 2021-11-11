@@ -2,28 +2,17 @@ var logoIcon = $('.account-icon')
 var logoText = $('.account-title')
 var body = $('.account-body')
 
-body.css({
-  'position': 'relative'
+
+body.mouseenter(function(){
+  $(logoIcon).animate({ "left": "8px", "opacity": "1" }, "600" );
+}).mouseleave(function(){
+  $(logoIcon).animate({ "left": "24px", "opacity": "0" }, "600" );
 })
 
-logoIcon.css({
-  'position': 'absolute',
-  'left': '0px'
+body.mouseenter(function(){
+  $(logoText).animate({ "left": "8px" }, "600" );
+}).mouseleave(function(){
+  $(logoText).animate({ "left": "0" }, "600" );
 })
 
-logoText.mouseover(function(){
-  logoIcon.animate({
-  'position': 'absolute',
-  'left': '-24px'}, 300)
-  logoText.css({'color': '#fbd784'})
-  logoText.animate({'position': 'relative','left': '8px'}, 300)
-});
-
-
-logoText.mouseout(function(){
-  logoIcon.animate({
-  'position': 'absolute',
-  'left': '-8px'}, 500)
-  logoText.css({'color': '#fff'})
-  logoText.animate({'position': 'relative','left': '-8px'}, 500)
-});
+ 
