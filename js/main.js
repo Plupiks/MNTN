@@ -10,9 +10,9 @@ body.mouseenter(function(){
 })
 
 body.mouseenter(function(){
-  $(logoText).animate({ "left": "8px" }, "600" );
+  $(logoText).animate({ "left": "8px" }, "600" ).css({"color": "#fbd784"});
 }).mouseleave(function(){
-  $(logoText).animate({ "left": "0" }, "600" );
+  $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
 })
 
  
