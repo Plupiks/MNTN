@@ -54,7 +54,9 @@ $(window).click(function(){
 
 function menuRemoveClass() {
   if($(window).width() > 800) {
-    $('.mobile-menu').removeClass('.mobile-menu-active');
+    $('.mobile-menu').removeClass('mobile-menu-active');
+    $('.burger-menu--menu').removeClass('burger-menu--menu-disable')
+    $('.burger-menu--close').removeClass('burger-menu--close-active')
   }
 }
 
