@@ -1,0 +1,182 @@
+/* ====================================== Adaptive ======================================*/
+@media (min-width: 801px) {
+  .mobile-menu-active {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 68px;
+  }
+
+  .article-text {
+    max-width: 50%;
+  }
+
+  .inf-block {
+    padding-left: 50px;
+  }
+
+  .inf-block::before {
+    width: 140px;
+    height: 140px;
+    font-size: 140px;
+  }
+
+  .article-img-block {
+    max-width: 45%;
+  }
+
+  .footer-right--left-list {
+    margin-right: 70px;
+  }
+
+  .footer-left {
+    max-width: 290px;
+  }
+
+  .footer-text {
+    margin-bottom: 75px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-body,
+  .account-body {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .mobile-menu .account-body {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    padding-left: 64px;
+    font-size: 14px;
+  }
+
+  .nav-text::after {
+    display: none;
+  }
+
+  .subtitle::before {
+    max-width: 42px;
+  }
+
+  .hero {
+    margin-top: 200px;
+    margin-bottom: 250px;
+  }
+
+  .article-title {
+    font-size: 44px;
+    line-height: 57px;
+  }
+}
+
+@media (max-width: 768px) {
+  .article {
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+  }
+
+  .article-text {
+    max-width: 100%;
+  }
+
+  .article-img-block {
+    max-width: 100%;
+    margin-bottom: 80px;
+  }
+
+  .article:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-right-body {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-left .logo {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .footer-left .logo img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .copyrights {
+    margin-bottom: 60px;
+  }
+
+  .footer-right-body {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-right--left-list {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    margin-bottom: 200px;
+  }
+
+  .article-title {
+    font-size: 34px;
+    line-height: 37px;
+  }
+
+  .article-descr {
+    font-size: 14px;
+  }
+
+  .inf-block {
+    padding-left: 20px;
+  }
+
+  .inf-block::before {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .copyrights {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+}

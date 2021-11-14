@@ -1,18 +1,70 @@
-var logoIcon = $('.account-icon')
-var logoText = $('.account-title')
-var body = $('.account-body')
+const logoIcon = $('.account-icon')
+const logoText = $('.account-title')
+const body = $('.account-body')
+const navButton = $('.burger-menu')
+const mobileMenu = $('.mobile-menu')
+const mediaQuery = window.matchMedia('(max-width: 800px)')
+const mediaQueryMin = window.matchMedia('(min-width: 800px)')
 
 
-body.mouseenter(function(){
-  $(logoIcon).animate({ "left": "8px", "opacity": "1" }, "600" );
-}).mouseleave(function(){
-  $(logoIcon).animate({ "left": "24px", "opacity": "0" }, "600" );
+if (mediaQuery.matches) {
+  navButton.on('click', function(e){
+    e.stopPropagation();
+    mobileMenu.toggleClass('mobile-menu-active');
+    $('.burger-menu--close').toggleClass('burger-menu--close-active')
+    $('.burger-menu--menu').toggleClass('burger-menu--menu-disable')
+  });
+} else {
+    mobileMenu.removeClass('mobile-menu-active');
+}
+
+
+if (mediaQueryMin.matches) {
+  body.on('mouseenter', function(){
+    $(logoIcon).animate({ "left": "8px", "opacity": "1" }, "600" );
+    $(logoText).animate({ "left": "8px" }, "600" ).css({"color": "#fbd784"});
+  });
+
+  body.on('mouseleave', function(){
+    $(logoIcon).animate({ "left": "24px", "opacity": "0" }, "600" )
+    $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
+  });
+}
+
+if (mediaQuery.matches) {
+  body.on('mouseenter', function(){
+    $(logoIcon).animate({ "left": "18px", "opacity": "1" }, "600" );
+    $(logoText).animate({ "left": "18px" }, "600" ).css({"color": "#fbd784"});
+  });
+
+  body.on('mouseleave', function(){
+    $(logoIcon).animate({ "left": "40px", "opacity": "0" }, "600" )
+    $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
+  });
+}
+
+
+$(window).click(function(){
+  if (mobileMenu.hasClass('mobile-menu-active')) {
+    mobileMenu.toggleClass('mobile-menu-active');
+    $('.burger-menu--close').toggleClass('burger-menu--close-active')
+    $('.burger-menu--menu').toggleClass('burger-menu--menu-disable')
+  }
 })
 
-body.mouseenter(function(){
-  $(logoText).animate({ "left": "8px" }, "600" ).css({"color": "#fbd784"});
-}).mouseleave(function(){
-  $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
+function menuRemoveClass() {
+  if($(window).width() > 800) {
+    $('.mobile-menu').removeClass('.mobile-menu-active');
+  }
+}
+
+$(window).resize(function(){
+  menuRemoveClass();
+})
+
+
+mobileMenu.click(function(e){
+  e.stopPropagation();
 })
 
  
