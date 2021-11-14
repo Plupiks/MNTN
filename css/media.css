@@ -54,6 +54,13 @@
 
   .mobile-menu .account-body {
     display: flex;
+    margin-left: 8px;
+  }
+
+  .account-body .account-icon {
+    left: 0px;
+    margin-right: 8px;
+    opacity: 1;
   }
 
   .hero-title {

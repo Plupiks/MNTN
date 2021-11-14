@@ -1,4 +1,4 @@
-const logoIcon = $('.account-icon')
+const logoIcon = $('.account-body .account-icon')
 const logoText = $('.account-title')
 const body = $('.account-body')
 const navButton = $('.burger-menu')
@@ -32,18 +32,6 @@ if (mediaQueryMin.matches) {
 
   body.on('mouseleave', function(){
     $(logoIcon).animate({ "left": "24px", "opacity": "0" }, "600" )
-    $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
-  });
-}
-
-if (mediaQuery.matches) {
-  body.on('mouseenter', function(){
-    $(logoIcon).animate({ "left": "18px", "opacity": "1" }, "600" );
-    $(logoText).animate({ "left": "18px" }, "600" ).css({"color": "#fbd784"});
-  });
-
-  body.on('mouseleave', function(){
-    $(logoIcon).animate({ "left": "40px", "opacity": "0" }, "600" )
     $(logoText).animate({ "left": "0" }, "600" ).css({"color": "#fff"});
   });
 }

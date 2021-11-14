@@ -148,6 +148,17 @@ ul {
   opacity: 0;
 }
 
+.account-body-mobile {
+  display: flex;
+  align-items: center;
+}
+
+.account-body-mobile .account-icon {
+  opacity: 1;
+  position: relative;
+  left: 0;
+}
+
 .account-title {
   position: relative;
   left: 0;
