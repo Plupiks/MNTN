@@ -64,7 +64,7 @@ $(window).on('resize',function(){
   menuRemoveClass();
 })
 
-$(window).on('load', function(){
+$(window).on('load resize', function(){
   menuOpen();
 })
 
